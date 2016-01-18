@@ -22,14 +22,9 @@ import "phoenix_html"
 
 import React from "react"
 import ReactDOM from "react-dom"
-
-class HelloWorld extends React.Component {
-  render() {
-    return (<h1>Hello World!</h1>)
-  }
-}
+import CommentBox from "./comment"
 
 ReactDOM.render(
-  <HelloWorld/>,
-  document.getElementById("hello-world")
+  <CommentBox url="api/comment" pollInterval={2000} />,
+  document.getElementById("content")
 )

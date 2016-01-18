@@ -20,7 +20,9 @@ defmodule Reactpx.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Reactpx do
-  #   pipe_through :api
-  # end
+  scope "/api/", Reactpx do
+    pipe_through :api
+
+    post "comment", ApiController, :comment
+  end
 end
